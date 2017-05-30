@@ -1,0 +1,22 @@
+class {
+
+  onInput(input) {
+    this.state = {
+      value: 300
+    };
+  }
+
+  changeVal() {
+      this.getEl('number').value = this.getEl('slider').value;
+  }
+
+  changeVal2() {
+      this.getEl('slider').value = this.getEl('number').value;
+  }
+}
+
+$ var sliderSetup = {'min': 100, 'max': 2000, 'step':100, 'type': 'range'}
+$ var value = state.value;
+
+<input key="slider" ${sliderSetup} value="${value}" on-mouseUp('changeVal')/>
+<input key="number" value="${value}" on-keyUp('changeVal2')/>
