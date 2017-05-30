@@ -1,0 +1,18 @@
+var colors = input.colors;
+
+<div.color-picker-footer>
+ <div.color-picker-selection-container>
+   <div for(color in colors)>
+     <!--
+     Listen for the `colorSelected` event emitted from
+     the <color-picker-selection> component and handle
+     it in this component's `onColorSelected` method.
+     -->
+     <color-picker-selection backgroundColor=color on-colorSelected('onColorSelected')/>
+   </div>
+   <input
+     key="hexInput"
+     placeholder="Hex value"
+     on-input('onHexInput')/>
+ </div>
+</div>
